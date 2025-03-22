@@ -1,22 +1,16 @@
-// filepath: d:\DDON\New folder\my-app\src\App.js
-
 import './App.css';
 import Auth from "./Auth";
-import { Route, Routes } from 'react-router-dom'
-import { Register } from './Register';
-
+import { Register } from './Register'; // Remove the curly braces since it's a default export
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
     return (
-
-            <div className="App">
-                <Routes>
-                     <Route path='/' element={Register}/>
-                     <Route path='/Auth' element={Auth}/>
-                </Routes>
-            </div>
-            
-      
+        <div className="App">
+            <Routes>
+                <Route path='/' element={<Register />} />
+                <Route path='/Auth' element={<Auth />} />
+            </Routes>
+        </div>
     );
 }
 
