@@ -1,25 +1,23 @@
-import logo from './logo.svg';
+// filepath: d:\DDON\New folder\my-app\src\App.js
+
 import './App.css';
+import Auth from "./Auth";
+import { Route, Routes } from 'react-router-dom'
+import { Register } from './Register';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+
+            <div className="App">
+                <Routes>
+                     <Route path='/' element={Register}/>
+                     <Route path='/Auth' element={Auth}/>
+                </Routes>
+            </div>
+            
+      
+    );
 }
 
 export default App;
