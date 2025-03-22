@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './Register.css'
 
 const Register = () => {
     const url = "http://20.244.56.144/test";
